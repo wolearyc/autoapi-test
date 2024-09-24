@@ -44,6 +44,6 @@ def function_b(x: np.ndarray[Any, np.dtype[np.float64]]):
     Parameters
     ----------
     x
-        type hint works as expected
+        bits of pieces of the type are linked properly
     """
     pass
