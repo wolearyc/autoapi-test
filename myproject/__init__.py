@@ -2,45 +2,48 @@
 
 import numpy as np
 from numpy.typing import NDArray
-from typing import Sequence
+from typing import Sequence, Any
 
 
-def my_function(x: NDArray[np.float64]):
+def function_a(x: NDArray[np.float64]):
     """Do something.
 
     Parameters
     ----------
     x
-        type hint doesn't link!
+        type hint doesn't link
     """
     pass
 
 
-class MyClass(Sequence[NDArray[np.float64]]):
-    """My class.
+def function_b(x: NDArray):
+    """Do something.
 
-    The base class works for some reason.
+    Parameters
+    ----------
+    x
+        type hint doesn't link
     """
+    pass
 
-    def __init__(self):
-        pass
 
-    def my_method(self, x: NDArray[np.float64]):
-        """Do something.
+def function_b(x: np.ndarray):
+    """Do something.
 
-        Parameters
-        ----------
-        x
-            type hint doesn't link!
-        """
-        pass
+    Parameters
+    ----------
+    x
+        type hint works as expected
+    """
+    pass
 
-    def another_method(self, x: Sequence[NDArray[np.float64]]):
-        """Do something.
 
-        Parameters
-        ----------
-        x
-            type hint doesn't link!
-        """
-        pass
+def function_b(x: np.ndarray[Any, np.dtype[np.float64]]):
+    """Do something.
+
+    Parameters
+    ----------
+    x
+        type hint works as expected
+    """
+    pass

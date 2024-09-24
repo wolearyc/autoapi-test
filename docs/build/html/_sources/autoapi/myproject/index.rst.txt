@@ -22,17 +22,41 @@ Functions
 
 .. autoapisummary::
 
-   myproject.my_function
+   myproject.function_a
+   myproject.function_b
+   myproject.function_b
+   myproject.function_b
 
 
 Package Contents
 ----------------
 
-.. py:function:: my_function(x: numpy.typing.NDArray[numpy.float64])
+.. py:function:: function_a(x: numpy.typing.NDArray[numpy.float64])
 
    Do something.
 
-   :param x: type hint doesn't link!
+   :param x: type hint doesn't link
+
+
+.. py:function:: function_b(x: numpy.typing.NDArray)
+
+   Do something.
+
+   :param x: type hint doesn't link
+
+
+.. py:function:: function_b(x: numpy.ndarray)
+
+   Do something.
+
+   :param x: type hint works as expected
+
+
+.. py:function:: function_b(x: numpy.ndarray[Any, numpy.dtype[numpy.float64]])
+
+   Do something.
+
+   :param x: type hint works as expected
 
 
 .. py:class:: MyClass
@@ -42,7 +66,7 @@ Package Contents
 
    My class.
 
-   The base class works for some reason.
+   The base class works nicely.
 
 
    .. py:method:: my_method(x: numpy.typing.NDArray[numpy.float64])
