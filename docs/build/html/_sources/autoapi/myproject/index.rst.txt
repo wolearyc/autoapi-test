@@ -1,0 +1,63 @@
+myproject
+=========
+
+.. py:module:: myproject
+
+.. autoapi-nested-parse::
+
+   Main file.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   myproject.MyClass
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   myproject.my_function
+
+
+Package Contents
+----------------
+
+.. py:function:: my_function(x: numpy.typing.NDArray[numpy.float64])
+
+   Do something.
+
+   :param x: type hint doesn't link!
+
+
+.. py:class:: MyClass
+
+   Bases: :py:obj:`Sequence`\ [\ :py:obj:`numpy.typing.NDArray`\ [\ :py:obj:`numpy.float64`\ ]\ ]
+
+
+   My class.
+
+   The base class works for some reason.
+
+
+   .. py:method:: my_method(x: numpy.typing.NDArray[numpy.float64])
+
+      Do something.
+
+      :param x: type hint doesn't link!
+
+
+
+   .. py:method:: another_method(x: Sequence[numpy.typing.NDArray[numpy.float64]])
+
+      Do something.
+
+      :param x: type hint doesn't link!
+
+
+
